@@ -97,7 +97,7 @@ void inserirElemento()
 		nElementos++;
 	}
 	else {
-		cout << "Lista cheia";
+		cout << "Lista cheia" << endl;
 	}
 
 }
@@ -105,5 +105,17 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
-
+	int numero;
+	bool encontrado = false;
+	cout << "Digite um numero para checar se ele esta no array: ";
+	cin >> numero;
+	for (int i = 0; i < MAX; i++) {
+		if (lista[i] == numero) {
+			cout << "Elemento encontrado na posicao " << +i << endl;
+			encontrado = true;
+		}
+	}
+	if (encontrado == false) {
+		cout << "Elemento nao encontrado" << endl;
+	}
 }
